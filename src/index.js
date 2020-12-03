@@ -2,7 +2,7 @@ const express = require('express')
 const cors = require('cors')
 // const puppeteer = require('puppeteer')
 const app = express()
-const port = 3335
+const PORT = process.env.PORT || 5000
 const axios = require('axios')
 const cheerio = require('cheerio')
 
@@ -36,6 +36,6 @@ app.get('/b3', (req, res) => {
 
 })
 
-app.listen(port, () => {
-  console.log(`😍 Back-end started at http://localhost:${port}`)
+app.listen(PORT, () => {
+  console.log(`😍 Back-end started at http://localhost:${PORT}`)
 })
